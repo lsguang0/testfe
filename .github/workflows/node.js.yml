@@ -16,8 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -35,9 +34,9 @@ jobs:
     - name: Deploy 
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.FUWUQI }} 跟你取得名字对应上
+          SSH_PRIVATE_KEY: ${{ secrets.FUWUQI }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "42.192.53.215"
-          REMOTE_USER: "root"
+          REMOTE_USER: "ubuntu"
           TARGET: "/home/ubuntu/project"
