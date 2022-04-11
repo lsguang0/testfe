@@ -39,4 +39,4 @@ jobs:
           SOURCE: "dist/"
           REMOTE_HOST: "42.192.53.215"
           REMOTE_USER: "ubuntu"
-          TARGET: "/home/ubuntu/project/"
+          TARGET: "/home/ubuntu/project/logs/"
