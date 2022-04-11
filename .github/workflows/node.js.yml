@@ -38,5 +38,5 @@ jobs:
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "42.192.53.215"
-          REMOTE_USER: "root"
+          REMOTE_USER: "ubuntu"
           TARGET: "/home/ubuntu/project/"
