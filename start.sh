@@ -7,5 +7,5 @@ if [ ! "$(docker ps -q -f name=abcd)" ]; then
     fi
     docker build -t testfe --no-cache .
     # run your container
-    docker run -itd --name abcd -p 8002:80 -v /home/ubuntu/project/felog/my.conf:/etc/nginx/conf.d -v /home/ubuntu/project/felog/dist:/usr/share/nginx/html/ testfe
+    docker run -itd --name abcd -p 8002:80 testfe
 fi
