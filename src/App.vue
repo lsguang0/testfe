@@ -1,7 +1,6 @@
 <template>
     <h1>测试</h1>
     <h2>ubuntu</h2>
-    <h3>新增测试</h3>
     {{data}}
     <!-- <div v-for="(item, index) in data" :key="index">
         <div> {{item.username}}</div>
