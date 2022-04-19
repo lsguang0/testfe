@@ -12,4 +12,4 @@ docker run -itd --restart=always \
 -v /home/ubuntu/project/felogs:/var/log/nginx \
 -v /home/ubuntu/project/testfe/nginx:/etc/nginx/conf.d \
 -v /home/ubuntu/project/testfe/dist:/usr/share/nginx/html \
---name fe  -p 8002:80 testfe
+--name fe  -p 3000:80 testfe
