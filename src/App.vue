@@ -1,5 +1,5 @@
 <template>
-    <h1>测试</h1>
+    <h1>前端</h1>
     <h2>ubuntu</h2>
     {{data}}
     <!-- <div v-for="(item, index) in data" :key="index">
