@@ -1,12 +1,12 @@
-if [ ! "$(docker ps -q -f name=abcd)" ]; then
-    echo 'not testfe run'
-    if [ "$(docker ps -aq -f status=exited -f name=abcd)" ]; then
+if [ ! "$(docker ps -q -f name=fe)" ]; then
+    echo 'not fe run'
+    if [ "$(docker ps -aq -f status=exited -f name=fe)" ]; then
         # cleanup
         echo 'docker stop '
-        docker rm abcd
+        docker rm fe
     fi
     docker rmi testfe
     docker build -t testfe .
     # run your container
-    docker run -itd --name abcd -p 8002:80 testfe
+    docker run -itd --restart=always --name fe -p 8002:80 testfe
 fi
