@@ -1,4 +1,4 @@
-docker build testfe .
+docker build -f testfe .
 if [ ! "$(docker ps -q -f name=testfe)" ]; then
     echo 'not testfe run'
     if [ "$(docker ps -aq -f status=exited -f name=testfe)" ]; then
