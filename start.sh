@@ -8,5 +8,5 @@ if [ ! "$(docker ps -q -f name=fe)" ]; then
     docker rmi testfe
     docker build -t testfe .
     # run your container
-    docker run -itd --restart=always --name fe -p 8002:80 testfe
+    docker run -itd --restart=always -v ./nginx:/etc/nginx/conf.d -v ./dist:/usr/share/nginx/html --name fe -v  -p 8002:80 testfe
 fi
