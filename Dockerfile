@@ -1,4 +1,5 @@
 FROM nginx
 MAINTAINER testfe
-COPY my.conf /etc/nginx/nginx.conf
-COPY dist /usr/share/nginx/html/dist
+ADD my.conf /etc/nginx/conf.d
+ADD /home/ubuntu/project/felog/dist /usr/share/nginx/html/
+ADD /home/ubuntu/project/logs /var/log/nginx/
